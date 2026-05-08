@@ -264,13 +264,13 @@ CREATE TABLE automovelFuncionario (
     dataRetirada DATETIME NOT NULL,
     dataDevolucao DATETIME,
 
-    CONSTRAINT fk_AutomovelFuncionario
-        FOREIGN KEY (idAutomovel)
-        REFERENCES automovel(idAutomovel),
+    CONSTRAINT fk_automovel_vinculo 
+    FOREIGN KEY (idAutomovel) 
+    REFERENCES automovel(idAutomovel),
 
-    CONSTRAINT fk_FuncionarioAutomovel
-        FOREIGN KEY (idFuncionario)
-        REFERENCES funcionarios(idFuncionario)
+	 CONSTRAINT fk_funcionario_vinculo 
+    FOREIGN KEY (idFuncionario) 
+    REFERENCES funcionarios(idFuncionario)
 );
 
 -- =====================================================
