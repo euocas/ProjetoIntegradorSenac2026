@@ -24,7 +24,7 @@ include_once "../config/conexao.php";
 
     <div class="content">
 
-        <h1>Cadastro de Funcionários</h1>
+        <h1>Tela - Funcionários - IDEAL- Soluções Elétricas</h1>
 
         <br>
 
