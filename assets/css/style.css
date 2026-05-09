@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --orange: #D4541E;
   --orange-light: #E8673A;
   --dark: #111110;
@@ -8,7 +8,7 @@
   --cream-2: #EDE8E0;
   --text-muted: #8A8780;
   --border: rgba(255,255,255,0.08);
-}
+} */
 
 *{
     margin:0;
@@ -28,7 +28,7 @@ body{
 .sidebar{
     width:250px;
     min-height:100vh;
-    background:#06152d;
+    background:#111110;
     color:white;
     padding:20px;
 }
@@ -37,23 +37,49 @@ body{
     font-size:24px;
     font-weight:bold;
     margin-bottom:40px;
+    text-align: center;
+}
+.sidebar {
+    background: #151515;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
 }
 
-.sidebar ul{
-    list-style:none;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
 }
 
-.sidebar li{
-    margin-bottom:15px;
+.sidebar ul li {
+    margin-bottom: 10px;
 }
 
-.sidebar a{
-    color:white;
-    text-decoration:none;
-    display:block;
-    padding:12px;
-    border-radius:8px;
+.sidebar ul li a:hover {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
 }
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 12px;
+}
+
+.sidebar ul li a img {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+}
+
+
+
 
 .sidebar a:hover{
     background:#0b2b57;

@@ -24,7 +24,7 @@
     <div class="right">
         <div class="login-box">
             <h2>ACESSE SUA<br><span style="color:#ff5a1f;">ÁREA EXCLUSIVA</span></h2>
-            <p class="p_login">Acompanhe obras, contratos e documentações em tempo real.</p>
+            <p class="p_login">Acompanhe obras, contratos e documentações.</p>
 
             <?php if (!empty($_GET['erro'])): ?>
                 <div class="alerta-erro">
