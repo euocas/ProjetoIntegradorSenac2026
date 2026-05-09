@@ -1,57 +1,127 @@
-<div class="sidebar">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <div class="logo">
-        <img src="../assets/img/logopequeno.png" alt="">
-        
-         <br>
-        <hr> 
-        <!-- IDEAL<br> Soluções Elétricas -->
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <ul>
+    <title>Sidebar ERP</title>
 
-        <li>
-            <a href="../dashboard/dashboard.php">
-                  <img src="../assets/icons/home.png" alt="">
-                HOME
-            </a>
-        </li>
-        
-        <li>
-            <a href="#">
-                 <img src="../assets/icons/cadastro.png" alt="">
-                CADASTRO
-            </a>
-        </li>
+    <link rel="stylesheet" href="/projetointegradorsenac2026/assets/css/sidebar.css">
 
-        <li>
-            <a href="../funcionarios/funcionarios.php">
-                 <img src="../assets/icons/funcionario.png" alt="">
-                FUNCIONÁRIO
-            </a>
-        </li>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
 
-        <li>
-            <a href="#">
-                 <img src="../assets/icons/obra.png" alt="">
-                OBRA
-            </a>
-        </li>
+<body>
+    <aside class="sidebar">
+        <div>
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="/projetointegradorsenac2026/assets/img/logopequeno.png" alt="Logo">
+            </div>
+            <hr>
+            <br>
 
-        <li>
-            <a href="#">
-                  <img src="../assets/icons/financeiro.png" alt="">
-                FINANCEIRO
-            </a>
-        </li>
+            <!-- MENU PRINCIPAL -->
+            <ul class="menu">
+                <li>
+                    <a href="../dashboard/dashboard.php" class="active">
+                        <i class="fa-solid fa-table-columns"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../clientes/clientes.php">
+                        <i class="fa-solid fa-people-line"></i>
+                        Clientes
+                    </a>
+                </li>
+                <li>
+                    <a href="../obras/obras.php">
+                        <i class="fa-solid fa-building"></i>
+                        Obras
+                    </a>
+                </li>
+                <li>
+                    <a href="../veiculos/veiculos.php">
+                        <i class="fa-solid fa-car"></i>
+                        Veículos
+                    </a>
+                </li>
+                <li>
+                    <a href="../funcionarios/funcionarios.php">
+                        <i class="fa-solid fa-users"></i>
+                        Funcionários
+                    </a>
+                </li>
+                <li>
+                    <a href="../financeiro/financeiro.php">
+                        <i class="fa-solid fa-wallet"></i>
+                        Financeiro
+                    </a>
+                </li>
 
-        <li>
-            <a href="../logout.php">
-                 <img src="../assets/icons/sair.png" alt="">
-                Sair
-            </a>
-        </li>
+            </ul>
 
-    </ul>
+            <!-- CONFIGURAÇÕES -->
+            <div class="menu-title">
+                CONFIGURAÇÕES
+            </div>
 
-</div>
+            <ul class="menu">
+
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-circle-user"></i>
+                        Usuários
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-building"></i>
+                        Empresas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Permissões
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-list-check"></i>
+                        Logs do sistema
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../logout.php">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Sair
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- USUÁRIO -->
+        <div class="user">
+
+            <div class="avatar">
+                AD
+            </div>
+
+            <div class="user-info">
+                <h3>Administrador</h3>
+                <span>adm</span>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>
