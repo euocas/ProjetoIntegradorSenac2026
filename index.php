@@ -23,7 +23,10 @@
 
     <div class="right">
         <div class="login-box">
-            <h2>ACESSE SUA<br><span style="color:#ff5a1f;">ÁREA EXCLUSIVA</span></h2>
+            <div class="logo">
+                <img src="/projetointegradorsenac2026/assets/img/logo.png" alt="Logo">
+            </div>
+        <h2>ACESSE SUA<br><span style="color:#ff5a1f;">ÁREA EXCLUSIVA</span></h2>
             <p class="p_login">Acompanhe obras, contratos e documentações.</p>
 
             <?php if (!empty($_GET['erro'])): ?>

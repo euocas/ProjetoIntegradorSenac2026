@@ -24,8 +24,7 @@ include_once "../config/conexao.php";
 
     <div class="content">
 
-        <h1>Tela - Funcionários - IDEAL- Soluções Elétricas</h1>
-
+    <h1 class="titulo-pagina">Funcionários - IDEAL- Soluções Elétricas</h1>
         <br>
 
         <form action="salvar.php" method="POST">

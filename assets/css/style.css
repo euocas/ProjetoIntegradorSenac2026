@@ -1,91 +1,113 @@
-/* :root {
-  --orange: #D4541E;
-  --orange-light: #E8673A;
-  --dark: #111110;
-  --dark-2: #1A1A18;
-  --dark-3: #242421;
-  --cream: #F5F0E8;
-  --cream-2: #EDE8E0;
+/* -------------------------------------------------------------------------- */
+/* Variáveis (:root)                                                          */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --primary: #D4541E;
+  --primary-hover: #E8673A;
+  --sidebar-bg: #111110;
+  --sidebar-item-hover: rgba(255, 255, 255, 0.08);
+  --bg-main: #f5f6fa;
+  --text-dark: #111110;
+  --text-light: #ffffff;
   --text-muted: #8A8780;
-  --border: rgba(255,255,255,0.08);
-} */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial;
+  --transition: all 0.3s ease;
 }
 
-body{
-    background:#f5f6fa;
+/* -------------------------------------------------------------------------- */
+/* Global                                                                     */
+/* -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fonte levemente mais moderna que Arial pura */
 }
 
-.layout{
-    display:flex;
+body {
+  background: var(--bg-main);
+  color: var(--text-dark);
 }
 
-.sidebar{
-    width:250px;
-    min-height:100vh;
-    background:#111110;
-    color:white;
-    padding:20px;
+/* -------------------------------------------------------------------------- */
+/* Layout                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.layout {
+  display: flex;
 }
 
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    margin-bottom:40px;
-    text-align: center;
-}
+/* -------------------------------------------------------------------------- */
+/* Sidebar                                                                    */
+/* -------------------------------------------------------------------------- */
+
 .sidebar {
-    background: #151515;
-    width: 250px;
-    height: 100vh;
-    padding: 20px;
+  width: 250px;
+  min-height: 100vh;
+  background: var(--sidebar-bg);
+  color: var(--text-light);
+  padding: 20px;
+  position: sticky; /* Mantém a sidebar visível ao rolar a página */
+  top: 0;
 }
+
+.logo {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+/* Menu da Sidebar */
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
 }
 
 .sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar ul li a:hover {
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
+  margin-bottom: 8px;
 }
 
 .sidebar ul li a {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-light);
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
 
-    text-decoration: none;
-    color: white;
+/* Estados de Hover e Ativo */
 
-    padding: 12px;
+.sidebar ul li a:hover {
+  background: var(--sidebar-item-hover);
+  color: var(--primary-hover);
 }
 
 .sidebar ul li a img {
-    width: 22px;
-    height: 22px;
-
-    object-fit: contain;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Deixa ícones escuros brancos para contrastar com fundo preto */
 }
 
+/* -------------------------------------------------------------------------- */
+/* Conteúdo                                                                   */
+/* -------------------------------------------------------------------------- */
 
-
-
-.sidebar a:hover{
-    background:#0b2b57;
+.content {
+  flex: 1;
+  padding: 40px;
 }
 
-.content{
-    flex:1;
-    padding:30px;
+.titulo-pagina {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 10px;
 }

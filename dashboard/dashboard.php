@@ -28,7 +28,7 @@ include_once "../config/session.php";
 
         <br>
 
-        <h2>
+        <h2 class="titulo-pagina">
             Sistema ERP  - IDEAL - Soluções elétricas
         </h2>
 

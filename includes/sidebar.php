@@ -18,7 +18,7 @@
         <div>
             <!-- LOGO -->
             <div class="logo">
-                <img src="/projetointegradorsenac2026/assets/img/logopequeno.png" alt="Logo">
+                <img src="/projetointegradorsenac2026/assets/img/logo.png" alt="Logo">
             </div>
             <hr>
             <br>
@@ -114,7 +114,7 @@
         <div class="user">
 
             <div class="avatar">
-                AD
+            <i class="fa-solid fa-user"></i>
             </div>
 
             <div class="user-info">

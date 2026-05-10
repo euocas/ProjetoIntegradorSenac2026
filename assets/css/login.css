@@ -10,6 +10,19 @@ body {
     color: white;
 }
 
+.login-box .logo {
+    display: flex;
+    justify-content: center;
+    margin-top: -8px;
+    margin-bottom: 80px; /* aumenta o respiro antes do título */
+}
+
+.login-box .logo img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
 .container {
     display: flex;
     height: 100vh;
