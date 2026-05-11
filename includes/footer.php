@@ -2,7 +2,7 @@
 
 <footer class="footer">
 
-    Sistema Integrado de Gestão
+    Cod7 Co 
 
 </footer>
 
