@@ -35,22 +35,18 @@ CREATE TABLE funcionarios (
     dataNascimento DATE NOT NULL,
     sexo ENUM('Masculino', 'Feminino', 'Outro'),
     naturalidade VARCHAR(100),
-
+    estado_nascimento VARCHAR(2);
     tipoLogradouro VARCHAR(15) NOT NULL,
     nomeLogradouro VARCHAR(100) NOT NULL,
     numero VARCHAR(6) NOT NULL,
     complemento VARCHAR(30),
-
     cidade VARCHAR(100),
     cep VARCHAR(10),
-
+ 	estado varchar (2);
     email VARCHAR(150) NOT NULL,
     cargoFuncao VARCHAR(100),
-
-    tipoContrato ENUM('CLT', 'TERCERIZADA', 'FREE LANCE') NOT NULL,
-
+    tipoContrato ENUM('CLT', 'CONTRATO TEMPORARIO','PESSOA JURÍRIDICA', 'TERCERIZADA') NOT NULL,
     status ENUM('ativo', 'inativo') NOT NULL DEFAULT 'ativo',
-
     observacoes TEXT
 );
 
@@ -289,3 +285,5 @@ CREATE TABLE usuario (
 -- =====================================================
 
 SELECT * FROM usuarios
+
+SHOW databases;
