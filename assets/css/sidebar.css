@@ -20,6 +20,7 @@ body {
 .layout {
   display: flex; /* Coloca a sidebar e o content lado a lado */
   min-height: 100vh;
+  align-items: flex-start; /* ← era stretch, isso fazia a sidebar tentar igualar a altura do formulário */
 }
 
 .content {
@@ -31,21 +32,22 @@ body {
 /* -------------------------------------------------------------------------- */
 /* Sidebar                                                                    */
 /* -------------------------------------------------------------------------- */
-
 .sidebar {
-  /* margin-top: auto;  <-- REMOVA ESTA LINHA */
   width: 220px;
+  min-height: 100vh;
+  flex-shrink: 0;
+  position: sticky; /* ← fica presa enquanto o conteúdo rola */
+  top: 0;
   height: 100vh;
   background: #151515;
   color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Reduzi um pouco para não apertar tanto */
-  box-sizing: border-box; /* Importante para o padding não aumentar o tamanho da barra */
-  /* position: fixed; Garante que ela fique presa na lateral */
-  left: 0;
-  top: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+
 
 /* ----------TAMANHO DA IMAGEM  ---------- */
 
@@ -113,6 +115,7 @@ body {
 }
 
 .user {
+  margin-top: auto;
   border-top: 1px solid #223550;
   padding-top: 20px;
   display: flex;
@@ -252,7 +255,7 @@ td a:hover {
 /* -------------------------------------------------------------------------- */
 
 .titulo-pagina {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: #1a1a1a;

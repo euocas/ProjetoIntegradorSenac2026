@@ -1,0 +1,309 @@
+/* -------------------------------------------------------------------------- */
+/* Variáveis (:root)                                                          */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --primary: #D4541E;
+  --primary-hover: #E8673A;
+  --sidebar-bg: #111110;
+  --sidebar-item-hover: rgba(255, 255, 255, 0.08);
+  --bg-main: #f5f6fa;
+  --text-dark: #111110;
+  --text-light: #ffffff;
+  --text-muted: #8A8780;
+  --transition: all 0.3s ease;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Global                                                                     */
+/* -------------------------------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fonte levemente mais moderna que Arial pura */
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-dark);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Layout                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.layout {
+  display: flex;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Sidebar                                                                    */
+/* -------------------------------------------------------------------------- */
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: var(--sidebar-bg);
+  color: var(--text-light);
+  padding: 20px;
+  position: sticky; /* Mantém a sidebar visível ao rolar a página */
+  top: 0;
+}
+
+.logo {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+/* Menu da Sidebar */
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text-light);
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+/* Estados de Hover e Ativo */
+
+.sidebar ul li a:hover {
+  background: var(--sidebar-item-hover);
+  color: var(--primary-hover);
+}
+
+.sidebar ul li a img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Deixa ícones escuros brancos para contrastar com fundo preto */
+}
+
+/* -------------------------------------------------------------------------- */
+/* Conteúdo                                                                   */
+/* -------------------------------------------------------------------------- */
+
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.titulo-pagina {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 10px;
+}
+/* -------------------------------------------------------------------------- */
+/* CSS DA PÁGINA FUNCIONÁRIO                                                  */
+/* -------------------------------------------------------------------------- */
+
+/* ===================================================
+   FORMULÁRIO DE FUNCIONÁRIOS
+   Complementa o sidebar.css — não redefine layout,
+   sidebar, .content, .layout ou .titulo-pagina
+   =================================================== */
+
+/* Card branco que envolve o formulário */
+.page-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    border: 1px solid #eee;
+    width: 100%;
+}
+
+/* Sobrescreve o form genérico do sidebar.css para este formulário */
+.form-funcionario {
+    display: block !important;
+    flex-wrap: unset !important;
+    gap: unset !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    width: 100%;
+}
+
+/* Grid de 2 colunas, largura total */
+/* .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+} */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #888;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    border-bottom: 1.5px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    color: #222;
+    padding: 6px 0;
+    background: transparent;
+    width: 100%;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-bottom-color: #e04a10;
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    -webkit-appearance: none; /* Safari e Chrome antigos */
+    -moz-appearance: none;    /* Firefox antigo */
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    padding-right: 24px;
+    cursor: pointer;
+}
+
+.form-group input::placeholder {
+    color: #bbb;
+}
+
+.form-group input[type="date"] {
+    color: #888;
+
+}
+
+/* Observações + Botões lado a lado */
+.bottom-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 16px 20px 0 20px;
+    
+}
+
+.obs-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.obs-group label {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.obs-group textarea {
+    resize: vertical;
+    min-height: 155px;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #222;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+ 
+}
+
+.obs-group textarea:focus {
+    border-color: #e04a10;
+}
+
+.obs-group textarea::placeholder {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* Botões */
+.buttons {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.btn {
+    flex: 1;
+    padding: 16px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: filter 0.15s;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.btn:hover  { filter: brightness(0.88); }
+.btn:active { filter: brightness(0.78); }
+
+.btn-dark  { background-color: #1a1a1a; color: #fff; }
+.btn-blue  { background-color: #2563eb; color: #fff; }
+.btn-green { background-color: #16a34a; color: #fff; }
+.btn-red   { background-color: #dc2626; color: #fff; }
+
+/* Destaque AL no título */
+.destaque { color: #e04a10; }
+
+.titulo-pagina-func
+{
+  padding: 10px;
+  text-align: center;
+}
+

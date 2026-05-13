@@ -87,13 +87,6 @@
 
                 <li>
                     <a href="#">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        Permissões
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
                         <i class="fa-solid fa-list-check"></i>
                         Logs do sistema
                     </a>
