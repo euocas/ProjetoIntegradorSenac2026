@@ -9,6 +9,7 @@ $email = $_POST['email'] ?? '';
 $senha = $_POST['senha'] ?? '';
 $manter = isset($_POST['manter_conectado']);
 
+
 $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = ?");
 $sql->execute([$email]);
 $usuario = $sql->fetch();
@@ -18,7 +19,7 @@ if (!$usuario) {
     exit;
 }
 
-if ($senha !== $usuario['senha']) {
+if (!password_verify($senha, $usuario['senha'])) {
     header("Location: ../index.php?erro=senha&email=" . urlencode($email));
     exit;
 }
